@@ -75,7 +75,7 @@ function M_perptM_perp_rho_x(missing_indices, rho, x, DFTdim, DFTsize)
     # return (M_perp^t*M_perp+rho*I)*x
     n = prod(DFTsize);
     Ax = rho.*x;
-    w = M_perpt_M_perp_vec(DFTdim, DFTsize, x, missing_indices)
+    w = M_perpt_M_perp_vec_old(DFTdim, DFTsize, x, missing_indices)
     Ax = w.+Ax;
     return Ax
 end

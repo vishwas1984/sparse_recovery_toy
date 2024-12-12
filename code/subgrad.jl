@@ -8,8 +8,8 @@ function subgrad(paramf, beta)
     idx_missing = paramf[5];
 
     n = prod(DFTsize);
-    w = M_perpt_M_perp_vec(DFTdim, DFTsize, beta, idx_missing)
-    w = w.- M_perptz;
+    w = M_perpt_M_perp_vec_old(DFTdim, DFTsize, beta, idx_missing)
+    w .= w .- M_perptz;
     dist_vec = entrywisesubgrad.(w, beta, lambda);
     max_dist = maximum(dist_vec);
     return max_dist

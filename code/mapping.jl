@@ -153,7 +153,7 @@ function beta_to_DFT(dim, size, beta)
         return beta_to_DFT_1d(beta, size)
     elseif (dim == 2)
         return beta_to_DFT_2d(beta, size)
-    else (dim == 3)
+    elseif (dim == 3)
         return beta_to_DFT_3d(beta, size)
     end
 end
